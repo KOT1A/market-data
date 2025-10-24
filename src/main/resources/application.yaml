@@ -1,2 +1,5 @@
 server:
   port: 8801
+integrations:
+  moex:
+    url: iss.moex.com
