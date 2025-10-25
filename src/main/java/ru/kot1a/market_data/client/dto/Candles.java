@@ -10,7 +10,6 @@ import java.util.List;
 @Setter
 public class Candles {
     List<List<String>> data;
-
     @JsonIgnore
     Object metadata;
     @JsonIgnore
