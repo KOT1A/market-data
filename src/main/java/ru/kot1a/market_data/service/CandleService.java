@@ -4,7 +4,6 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import ru.kot1a.market_data.client.MoexClient;
 import ru.kot1a.market_data.client.dto.Candles;
-import ru.kot1a.market_data.client.dto.Securities;
 import ru.kot1a.market_data.contoller.dto.CandleRequest;
 
 @Service
@@ -21,9 +20,5 @@ public class CandleService {
                 candleRequest.getSecurity(),
                 candleRequest.getFrom(),
                 candleRequest.getInterval());
-    }
-
-    public Securities getSecurities(){
-        return moexClient.getSecurities(0, 100);
     }
 }

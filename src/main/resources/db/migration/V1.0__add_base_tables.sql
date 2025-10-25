@@ -1,13 +1,22 @@
 --Создаем таблицу для хранения тикеров
-create table ticker (
-    ticker_id       integer not null,
-    ticker_engine   text    not null,
-    ticker_market   text    not null,
-    ticker_board    text    not null,
-    ticker_ticker   text    not null,
-    ticker_lot_size integer not null    default 1,
-    constraint pk_ticker_id primary key (ticker_id),
-    constraint ticker_uniq unique (ticker_engine, ticker_market, ticker_board, ticker_ticker)
+create table security (
+    security_id               integer not null,
+    security_ticker           text    not null,
+    security_board            text    not null,
+    security_market           text    not null,
+    security_engine           text    not null,
+    security_shortname        text    not null,
+    security_name             text    not null,
+    security_regnumber        text    not null,
+    security_isin             text    not null,
+    security_is_traded        boolean not null,
+    security_emitent_id       text    not null,
+    security_emitent_title    text    not null,
+    security_emitent_inn      text    not null,
+    security_emitent_okpo     text    not null,
+    security_lot_size integer not null    default 1,
+    constraint pk_security_id primary key (security_id),
+    constraint security_uniq unique (security_engine, security_market, security_board, security_ticker)
 );
 
 --Создаем таблицу для хранения свечей

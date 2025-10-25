@@ -12,6 +12,6 @@ public class DataFromMoex {
     @JsonIgnore
     Object metadata;
     @JsonIgnore
-    Object columns;
+    List<String> columns;
     List<List<String>> data;
 }
