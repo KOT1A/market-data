@@ -12,9 +12,11 @@ import java.sql.Timestamp;
 public interface MoexClient {
 
     /**
-     * @param market
-     * @param board
-     * @param security
+     * Получение исторических данных в виде японских свечей (open, high, low, close, value, volume)
+     * @param engine движок (рыночная площадка)
+     * @param market рынок внутри движка
+     * @param board режим торгов
+     * @param security тикер ценной бумаги
      * @param interval временной интервал свечи:<br>
      *                 1 - 1 минута<br>
      *                 10 - 10 минут<br>
@@ -23,7 +25,7 @@ public interface MoexClient {
      *                 7 - 1 неделя<br>
      *                 31 - 1 месяц<br>
      *                 4 - 1 кварта
-     * @return
+     * @return свечную историю (candles) для указанного финансового инструмента за заданный период
      */
     @GetMapping("/iss/engines/{engine}/markets/{market}/boards/{board}/securities/{security}/candles.json")
     DataFromMoex getCandlesWithParameters(@PathVariable String engine,

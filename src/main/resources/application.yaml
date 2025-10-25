@@ -3,3 +3,6 @@ server:
 integrations:
   moex:
     url: iss.moex.com
+logging:
+  level:
+    ru.kot1a.market_data: debug
