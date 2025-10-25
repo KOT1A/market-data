@@ -5,6 +5,6 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class Candles {
-    private DataFromMoex candles;
+public class Securities {
+    private DataFromMoex securities;
 }

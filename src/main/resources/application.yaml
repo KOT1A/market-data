@@ -3,6 +3,20 @@ server:
 integrations:
   moex:
     url: iss.moex.com
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5433/${DB_NAME:market_data}?currentSchema=${DB_SCHEMA:market_data}
+    username: ${DB_USER_NAME:postgres}
+    password: ${DB_USER_PASS:190695}
+  jpa:
+    properties:
+      hibernate:
+        show_sql: true
+        format_sql: true
+    open-in-view: false
+  flyway:
+    enabled: true
+    schemas: ${DB_SCHEMA:market_data}
 logging:
   level:
     ru.kot1a.market_data: debug
