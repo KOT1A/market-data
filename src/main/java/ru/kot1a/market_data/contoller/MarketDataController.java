@@ -14,6 +14,7 @@ import ru.kot1a.market_data.client.dto.Candles;
 import ru.kot1a.market_data.service.SecurityService;
 
 import java.util.List;
+import java.util.Objects;
 
 @RestController
 @RequestMapping("v1/market_data")
@@ -25,14 +26,15 @@ public class MarketDataController {
     private final SecurityService securityService;
 
     @PostMapping("/candles")
-    public Candles getCandles(@RequestBody CandleRequest candleRequest){
-        log.debug("Тело запроса POST v1/market/data/candles для получения свечей указанного инструмента за" +
-                "определённый период: {}", candleRequest);
+    public Candles getCandles(@RequestBody CandleRequest candleRequest) {
+        Objects.requireNonNull(candleRequest, "candleRequest must not be null");
+        log.debug("Тело запроса POST v1/market_data/candles для получения свечей указанного инструмента за " +
+                "определенный период: {}", candleRequest);
         return candleService.getCandles(candleRequest);
     }
 
     @GetMapping("/securities")
-    public List<Security> getSecurities(){
+    public List<Security> getSecurities() {
         return securityService.getSecurities();
     }
 }
