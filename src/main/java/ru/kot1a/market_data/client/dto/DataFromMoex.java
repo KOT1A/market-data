@@ -10,8 +10,8 @@ import java.util.List;
 @Setter
 public class DataFromMoex {
     @JsonIgnore
-    private Object metadata;
+    Object metadata;
     @JsonIgnore
-    private List<String> columns;
-    private List<List<String>> data;
+    List<String> columns;
+    List<List<String>> data;
 }

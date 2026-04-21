@@ -3,17 +3,13 @@ package ru.kot1a.market_data.repository.entity;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
-import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
-import lombok.NoArgsConstructor;
 
 @Entity
 @Table(name = "security")
 @Data
 @Builder
-@NoArgsConstructor
-@AllArgsConstructor
 public class Security {
     @Id
     private String securityId; //*generate*
