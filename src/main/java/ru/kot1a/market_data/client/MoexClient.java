@@ -36,7 +36,7 @@ public interface MoexClient {
                        @PathVariable String board,
                        @PathVariable String security,
                        @RequestParam(required = false) Timestamp from,
-                       @RequestParam(required = false) int interval);
+                       @RequestParam(required = false) Integer interval);
 
     /**
      * @param start номер строки (отсчет с нуля), с которой следует начать порцию возвращаемых данных (см. рук-во
@@ -45,7 +45,7 @@ public interface MoexClient {
      * @return список бумаг торгуемых на московской бирже.
      */
     @GetMapping("/iss/securities.json")
-    Securities getSecurities(@RequestParam(required = false) int start,
-                             @RequestParam(required = false) int limit);
+    Securities getSecurities(@RequestParam(required = false) Integer start,
+                             @RequestParam(required = false) Integer limit);
 }
 
