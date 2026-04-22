@@ -8,7 +8,7 @@
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>3.5.6</version>
-        <relativePath/> <!-- Поиск родительского элемента в репозитории -->
+        <relativePath/> <!-- Сразу идём в репозиторий maven -->
     </parent>
 
     <groupId>ru.kot1a</groupId>
@@ -16,11 +16,11 @@
     <version>1.0-SNAPSHOT</version>
 
     <properties>
-        <maven.compiler.release>25</maven.compiler.release>
-
         <commons-lang3.version>3.19.0</commons-lang3.version>
+        <maven.compiler.release>25</maven.compiler.release>
         <logback-core.version>1.5.20</logback-core.version>
         <lombok.version>1.18.42</lombok.version>
+        <springdoc.version>2.8.6</springdoc.version>
     </properties>
 
     <dependencyManagement>
@@ -75,6 +75,11 @@
             <groupId>org.flywaydb</groupId>
             <artifactId>flyway-database-postgresql</artifactId>
         </dependency>
+        <dependency>
+            <groupId>org.springdoc</groupId>
+            <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
+            <version>${springdoc.version}</version>
+        </dependency>
     </dependencies>
 
     <build>
@@ -86,7 +91,6 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>${maven-compiler-plugin.version}</version>
                 <configuration>
                     <release>${maven.compiler.release}</release>
                     <annotationProcessorPaths>

@@ -2,10 +2,10 @@ package ru.kot1a.market_data.service;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-import ru.kot1a.market_data.client.MoexClient;
-import ru.kot1a.market_data.client.dto.Securities;
+import ru.kot1a.market_data.client.moex.MoexClient;
+import ru.kot1a.market_data.client.moex.dto.Securities;
 import ru.kot1a.market_data.mapper.SecurityMapper;
-import ru.kot1a.market_data.repository.entity.Security;
+import ru.kot1a.market_data.entity.Security;
 
 import java.util.List;
 

@@ -2,8 +2,8 @@ package ru.kot1a.market_data.service;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-import ru.kot1a.market_data.client.MoexClient;
-import ru.kot1a.market_data.client.dto.Candles;
+import ru.kot1a.market_data.client.moex.MoexClient;
+import ru.kot1a.market_data.client.moex.dto.Candles;
 import ru.kot1a.market_data.contoller.dto.CandleRequest;
 
 @Service

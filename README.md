@@ -15,6 +15,10 @@
 информации формируются в виде URL с параметрами (или без), список всех доступных URL перечислен на странице
 <a href="https://iss.moex.com/iss/reference/">ISS Queries<a/>.
 
+### Swagger
+
+Swagger доступен по адресу http://localhost:8801/swagger-ui/index.html
+
 ### Источники и полезные ссылки
 - <a href="https://habr.com/ru/articles/781006/">Изучаем и парсим биржевую информацию Мосбиржи. Наш первый парсер на
 Python, разбор кода</a><br>

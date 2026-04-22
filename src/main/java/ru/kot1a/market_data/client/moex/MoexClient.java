@@ -1,11 +1,11 @@
-package ru.kot1a.market_data.client;
+package ru.kot1a.market_data.client.moex;
 
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
-import ru.kot1a.market_data.client.dto.Candles;
-import ru.kot1a.market_data.client.dto.Securities;
+import ru.kot1a.market_data.client.moex.dto.Candles;
+import ru.kot1a.market_data.client.moex.dto.Securities;
 
 import java.sql.Timestamp;
 

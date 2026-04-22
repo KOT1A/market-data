@@ -8,9 +8,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import ru.kot1a.market_data.contoller.dto.CandleRequest;
-import ru.kot1a.market_data.repository.entity.Security;
+import ru.kot1a.market_data.entity.Security;
 import ru.kot1a.market_data.service.CandleService;
-import ru.kot1a.market_data.client.dto.Candles;
+import ru.kot1a.market_data.client.moex.dto.Candles;
 import ru.kot1a.market_data.service.SecurityService;
 
 import java.util.List;
